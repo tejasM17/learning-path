@@ -1,0 +1,20 @@
+{
+  "name": "contactmanager-api",
+  "version": "1.0.0",
+  "description": "this is contact manager api",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run start",
+    "dev": "nodemon server"
+  },
+  "author": "Tejas",
+  "license": "ISC",
+  "dependencies": {
+    "experss": "^0.0.1-security",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+/* Animated background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('your-background-image.jpg') repeat; /* Replace with your image */
+  opacity: 0.1;
+  z-index: -1;
+  animation: backgroundScroll 40s linear infinite;
+}
+
+@keyframes backgroundScroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+.title {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.input,
+.button {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  padding: 0 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  border: 2px solid #2980b9;
+}
+
+.button {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+}
+
+.input:focus,
+.button:focus {
+  outline: none;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.input::placeholder {
+  color: #d0e2ef;
+  opacity: 0.9;
+}
+
+.button:hover {
+  background-color: #333;
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.user-name {
+  padding-left: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.user-img {
+  text-align: center;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  animation: zoomIn 1s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.user-img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
