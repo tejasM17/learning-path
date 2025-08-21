@@ -1,0 +1,34 @@
+500 daily income
+1000 joining bonus (fixed for all )
+
+days
+0    -    1000
+1    -    1500
+2   -    2000
+3    -    2500
+
+y = mx + c
+
+y - Finala salary want to predict, / result
+x - days worked , input
+m = 500 / day, rate of change
+b = 1000 bonus, staring point x = 0
+
+y = 500 * x + b
+
+4 days
+y = 500 * 4 + 1000 = 3000
+
+
+///////////////////////////////////////////////////////////
+
+
+Vectors 
+hight = 170  ,  weight = 65 kg
+[170, 65] 
+
+low sd = close
+high sd = far
+
+class A
+65, 62, 59, 60

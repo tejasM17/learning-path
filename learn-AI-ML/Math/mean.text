@@ -1,0 +1,90 @@
+50, 60, 70, 75, 80, 90, 95
+
+7 students marks
+
+overall avrage?
+middel student?
+high score?
+
+
+mean = (x1 + x2 + x3 + ...... + xn)/n
+meadian = middel valu ( id odd count), If even middel 2 avrage
+mode = most repeated valu
+
+----------------------------------------
+1. Mean (Average)
+
+👉 Formula:
+
+Mean
+=
+Sum of all values
+Number of values
+
+          Number of values
+Mean    = -----------------
+          Sum of all values
+	​
+
+
+q1 = score = 10, 20 ,30
+
+mean --->
+
+add = 10 + 20 + 30 = 60
+count = 3
+
+mean = 60/3 = 20
+
+meadian --->
+
+meadian = 20
+
+mode --->
+
+mode = all valuesare unique, no mode
+
+Q2.}
+
+     50,70,70,90,45,76,99,88
+
+
+Mean --->
+
+mean = 50 + 70 + 70 + 90 + 45 + 76 + 99 + 88 / 8 = 73.3
+
+--------------------------------------------------------------
+
+actual valu y_true = what really happend
+predicted valu y_pred = what our model things will happen 
+
+
+data  : [25,29,35,32,27,3000]
+
+-------------------------------------------------------------------
+
+Percentage & ratio
+
+accuraccy = (corrected predictions / Ttal predictions ) * 100
+Pricision = (true Positives / Total predictive positivee )
+Recall = (Total positives / Total actual positives )
+
+Percentage  -  out of 100 - how much happend 
+ratio - comparision ex : a:b a/b
+
+percentage = (part/whole) * 100
+ratio = part / whole
+
+//////////////////////////////////////////////
+
+example you have 100 email and detect spam : 
+
+Total = 100
+correct = 90
+wrong  = 10
+
+accuraccy = (90 / 100 ) * 100 = 90 %
+
+out of 20 emails only 15 are spam emails
+
+precision = 15 / 20 = 0.75 = 75% true of spam
