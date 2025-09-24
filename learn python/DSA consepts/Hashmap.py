@@ -31,7 +31,7 @@ def hash_func(valu):
 
     for l in valu:
         sum_ofchar += ord(l)
-        print(f"ord - char : {ord(l)}")
+        print(f"ord of char : {ord(l)}")
         print(f"sum of cahr : {sum_ofchar}\n")
     print(f"sum_ofchar % 10 : {sum_ofchar % 10}")
     return sum_ofchar % 10
