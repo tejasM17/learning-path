@@ -1,42 +1,58 @@
-class Listnode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+# Step 1: Create a Node Class
 
 
-class Solution:
-    def revrList(self, head):
-        prv = None
-        cur = head
-
-        while cur:
-            print(f"current valu : {cur.val}")
-
-            nxt = cur.next  # next node na save madu
-
-            print(f"saving next : {nxt.val if nxt else None}")
-
-            cur.next = prv  # ulta jodisu
-
-            prv = cur  # prv munde haku
-            cur = nxt  # cur munde haku
-
-        return prv  # New head of reversed list
+class Node:
+    def __init__(self, val):
+        self.val = val  # The value stored
+        self.next = None  #  Pointer to next node (starts as None)
 
 
-# Build linked list: 1 -> 2 -> 3 -> 4 -> 5
-h = Listnode(1)
-h.next = Listnode(2)
-h.next.next = Listnode(3)
-h.next.next.next = Listnode(4)
-h.next.next.next.next = Listnode(5)
+# Step 2: Create a Linked List Class
 
-# Run reversal
-Sol = Solution()
-rev_head = Sol.revrList(h)
 
-# Print reversed linked list
-cur = rev_head
-while cur:
-    print(cur.val, end=" -> ")
-    cur = cur.next
+class Linkedlist:
+    def __init__(self):
+        self.head = None  # First node of the list (starts empty)
+
+    def addfirst(self, val):
+        new_node = Node(val)  # Create new carriage
+        new_node.next = self.head  # New node points to current head
+        self.head = new_node  # New node becomes the head
+
+    def addlast(self, val):
+        new_node = Node(val)  # Create new carriage
+
+        # If list is empty, new node becomes head
+        if self.head is None:
+            self.head = new_node
+            return
+
+        # Traverse to last node
+        current = self.head
+
+        while current.next is not None:
+            current = current.next
+
+        # Add new node at end
+        current.next = new_node
+
+    def display(self):
+        current = self.head
+        while current is not None:
+            print(current.val, "->", end=" ")
+            current = current.next
+        print("None")
+
+
+# Let's create and test!
+my_list = Linkedlist()
+
+# Add some numbers
+my_list.addfirst(3)
+my_list.addfirst(2)
+my_list.addfirst(1)
+
+my_list.addlast(4)
+
+# Display the list
+my_list.display()
